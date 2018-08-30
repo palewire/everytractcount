@@ -6,6 +6,6 @@ from .models import Tweet
 
 @admin.register(Tweet)
 class TweetAdmin(admin.ModelAdmin):
-    list_display = ("id", "created_at", "tract", "county", "state", "state_fips")
+    list_display = ("id", "created_at", "tract", "county", "state", "fips", "geoid", "census_url")
     search_fields = ("text",)
     date_hierarchy = "created_at"
