@@ -13,7 +13,7 @@ python-twitter = "*"
 us = "*"
 python-dateutil = "*"
 dj_database_url = "*"
-django-whitenoise = "*"
+whitenoise = "*"
 
 [requires]
 
