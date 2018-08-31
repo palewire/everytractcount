@@ -35,7 +35,11 @@ class Tweet(models.Model):
 
     @property
     def tract(self):
-        return self.text.split(",")[0].split()[-1].replace(".", "").strip()
+        t = self.text.split(",")[0].split()[-1].strip()
+        if len(t) == 1:
+            t += ".00"
+        i = int(t.replace(".", ""))
+        return "{:06d}".format(i)
 
     @property
     def county(self):

@@ -1,5 +1,4 @@
 import twitter
-from pprint import pprint
 from django.conf import settings
 from census_tweets.models import Tweet
 from dateutil.parser import parse as dateparse

@@ -1,0 +1,20 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+
+[packages]
+
+django = "*"
+gunicorn = "*"
+django-heroku = "*"
+python-twitter = "*"
+us = "*"
+python-dateutil = "*"
+dj_database_url = "*"
+django-whitenoise = "*"
+
+[requires]
+
+python_version = "2.7"
