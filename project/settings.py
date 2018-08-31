@@ -133,3 +133,10 @@ except ImportError:
     DATABASES['default'].update(db_from_env)
     DEBUG = False
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    ALLOWED_HOSTS = [
+        'everytractcount.herokuapp.com',
+    ]
+    TWITTER_CONSUMER_KEY = os.getenv('TWITTER_CONSUMER_KEY')
+    TWITTER_CONSUMER_SECRET = os.getenv('TWITTER_CONSUMER_SECRET')
+    TWITTER_ACCESS_TOKEN_KEY = os.getenv('TWITTER_ACCESS_TOKEN_KEY')
+    TWITTER_ACCESS_TOKEN_SECRET = os.getenv('TWITTER_ACCESS_TOKEN_SECRET')
