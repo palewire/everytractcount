@@ -67,7 +67,7 @@ class Tweet(models.Model):
             access_token_secret=settings.TWITTER_WRITE_ACCESS_TOKEN_SECRET
         )
         status = api.PostUpdate(
-            "@everytract " + self.census_url,
+            self.census_url,
             in_reply_to_status_id=int(self.id),
         )
         self.reply_id = status.id
