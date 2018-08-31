@@ -66,6 +66,6 @@ class Tweet(models.Model):
             access_token_key=settings.TWITTER_WRITE_ACCESS_TOKEN_KEY,
             access_token_secret=settings.TWITTER_WRITE_ACCESS_TOKEN_SECRET
         )
-        status = api.PostUpdate(self.text + " " + self.census_url)
+        status = api.PostUpdate(self.census_url)
         self.reply_id = status.id
         self.save()
