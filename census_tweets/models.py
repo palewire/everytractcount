@@ -36,7 +36,7 @@ class Tweet(models.Model):
     @property
     def tract(self):
         t = self.text.split(",")[0].split()[-1].strip()
-        if len(t) == 1:
+        if "." not in t:
             t += ".00"
         i = int(t.replace(".", ""))
         return "{:06d}".format(i)
