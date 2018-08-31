@@ -11,10 +11,10 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
 
         api = twitter.Api(
-            consumer_key=settings.TWITTER_CONSUMER_KEY,
-            consumer_secret=settings.TWITTER_CONSUMER_SECRET,
-            access_token_key=settings.TWITTER_ACCESS_TOKEN_KEY,
-            access_token_secret=settings.TWITTER_ACCESS_TOKEN_SECRET
+            consumer_key=settings.TWITTER_READ_CONSUMER_KEY,
+            consumer_secret=settings.TWITTER_READ_CONSUMER_SECRET,
+            access_token_key=settings.TWITTER_READ_ACCESS_TOKEN_KEY,
+            access_token_secret=settings.TWITTER_READ_ACCESS_TOKEN_SECRET
         )
         statuses = api.GetUserTimeline(screen_name="@everytract")
         for s in statuses:

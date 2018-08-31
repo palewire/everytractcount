@@ -61,10 +61,10 @@ class Tweet(models.Model):
         if self.reply_id:
             return False
         api = twitter.Api(
-            consumer_key=settings.TWITTER_CONSUMER_KEY,
-            consumer_secret=settings.TWITTER_CONSUMER_SECRET,
-            access_token_key=settings.TWITTER_ACCESS_TOKEN_KEY,
-            access_token_secret=settings.TWITTER_ACCESS_TOKEN_SECRET
+            consumer_key=settings.TWITTER_WRITE_CONSUMER_KEY,
+            consumer_secret=settings.TWITTER_WRITE_CONSUMER_SECRET,
+            access_token_key=settings.TWITTER_WRITE_ACCESS_TOKEN_KEY,
+            access_token_secret=settings.TWITTER_WRITE_ACCESS_TOKEN_SECRET
         )
         status = api.PostUpdate(
             "@everytract " + self.census_url,
