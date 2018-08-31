@@ -1,5 +1,5 @@
 import os
-import csv
+import csvkit
 import collections
 
 
@@ -8,7 +8,7 @@ COUNTIES_PATH = os.path.join(
     'data',
     '2017_Gaz_counties_national.txt'
 )
-COUNTIES_LIST = csv.DictReader(open(COUNTIES_PATH, 'r'), delimiter="\t")
+COUNTIES_LIST = csvkit.DictReader(open(COUNTIES_PATH, 'r'), delimiter="\t")
 COUNTIES_DICT = collections.defaultdict(dict)
 for row in COUNTIES_LIST:
     COUNTIES_DICT[row['USPS']][row['NAME']] = row['GEOID']

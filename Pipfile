@@ -14,6 +14,7 @@ us = "*"
 python-dateutil = "*"
 dj_database_url = "*"
 whitenoise = "*"
+csvkit = '*'
 
 [requires]
 
