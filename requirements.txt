@@ -34,7 +34,7 @@ MarkupSafe==1.0
 mistune==0.8.3
 nbconvert==5.3.1
 nbformat==4.4.0
-notebook==5.6.0
+notebook>=5.7.2
 numpy==1.15.1
 oauthlib==2.1.0
 pandas==0.23.4
@@ -51,7 +51,7 @@ python-dateutil==2.7.3
 python-twitter==3.4.2
 pytz==2018.5
 pyzmq==17.1.2
-requests==2.19.1
+requests>=2.20.0
 requests-oauthlib==1.0.0
 scandir==1.9.0
 Send2Trash==1.5.0
